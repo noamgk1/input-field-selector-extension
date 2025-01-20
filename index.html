@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Autofill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Form Autofill</h3>
+      <div class="field-group">
+        <input id="field-name" type="text" placeholder="Input name" />
+        <input id="field-value" type="text" placeholder="Value to fill" />
+      </div>
+      <div class="button-group">
+        <button id="add-field">Add to List</button>
+        <button id="select-input">Select Input</button>
+        <button id="fill-fields">Fill Fields</button>
+      </div>
+      <div id="input-list" class="input-list"></div>
+      <p id="empty-message" class="empty-message" style="display: none">
+        No input fields found on this page.
+      </p>
+      <table id="field-table">
+        <thead>
+          <tr>
+            <th>Input Name</th>
+            <th>Value</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="field-list">
+          <!-- Populated dynamically -->
+        </tbody>
+      </table>
+      <div id="empty-message" class="empty-message">No fields added yet.</div>
+    </div>
+    <div id="copyright">
+      <p>&copy; The K</p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
